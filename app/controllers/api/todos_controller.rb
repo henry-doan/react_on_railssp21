@@ -36,6 +36,9 @@ class Api::TodosController < ApplicationController
 
   private 
     def todo_params
+      # { newTodo: { title: 'react', complete } }
+      # { todo: { title: 'react', complete } }
+      # { todo: { title: "adsfasd", complete: false} }
       params.require(:todo).permit(:title, :complete)
     end
 end
